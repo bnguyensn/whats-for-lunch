@@ -1,0 +1,27 @@
+* {
+    /* Makes padding and border are included in the total width and height of elements */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 16px 'Open Sans', sans-serif;
+    color: #212121;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+
+.wrapper {
+    /* Elements with this class will be centered when the screen is large. */
+    /* Best used on a container */
+    max-width: 768px;
+    margin: 0 auto;
+}

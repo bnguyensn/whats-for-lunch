@@ -1,9 +1,9 @@
 {
-  "name": "anagram-solver-react",
+  "name": "whats-for-lunch",
   "version": "0.1.0",
-  "description": "An anagram solver using React and Nodejs.",
+  "description": "Tells you where to go for lunch.",
   "main": "index.js",
-  "url": "https://github.com/bnguyensn/anagram-solver-react",
+  "url": "https://github.com/bnguyensn/whats-for-lunch",
   "author": "@bnguyensn",
   "license": "MIT",
   "dependencies": {

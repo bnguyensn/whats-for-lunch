@@ -1,0 +1,56 @@
+/* ===== HEADER ===== */
+
+header {
+    background-color: #ffe83f;
+}
+
+#header-container {
+    padding: 10px;
+
+    font: 125% 'Gentium Basic', sans-serif;
+    letter-spacing: 2px;
+    color: #673AB7; /* Deep Purple 500 */
+
+    /* Flexbox shenanigans */
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: space-between; /* Children aligned to opposite sides */
+}
+
+@media (max-width: 768px) {
+    #header-container {
+        font-size: 100%;
+        letter-spacing: inherit;
+    }
+}
+
+/* ===== LOGO ===== */
+
+header .logo-container {
+    /* The logo inside the header is 32x32 */
+
+    width: auto; height: 32px;
+
+    /* Flexbox shenanigans */
+    display: flex;
+    align-items: center; /* Vertical centering */
+}
+
+.logo-container img {
+    width: auto; height: 32px;
+    border: 1px solid #212121;
+}
+
+.logo-container label {
+    margin-left: 10px;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav a {
+    color: inherit;
+}
+
+nav a:visited {
+    color: inherit;
+}

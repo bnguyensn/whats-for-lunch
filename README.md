@@ -1,2 +1,2 @@
-# anagram-solver-react
-An anagram solver using React and Nodejs
+# What's for Lunch?
+Tells you where to find lunch.
