@@ -1,0 +1,45 @@
+/* The search box */
+
+#search-box-container {
+    position: fixed;
+    top: 8px; left: 8px;
+    width: 80%;
+    max-width: 500px;
+    min-width: 200px;
+
+    background-color: #ffffff;
+
+    /* Flexbox shenanigans */
+    display: flex;
+    align-items: center; /* Vertical centering */
+}
+
+#search-box-container i {
+    margin: 4px;
+
+    /* Colors and sizes are specified using classes */
+}
+
+#search-box-form {
+    margin: 4px;
+
+    /* Flex-box shenanigans */
+    flex-grow: 1; /* This child will consume the remaining space */
+}
+
+#search-box-form-input {
+    width: 100%; /* Since the form is being expanded via flex, we just need to expand form-input to the form */
+
+    padding: 4px;
+
+}
+
+/* Search box suggestions */
+
+#search-box-suggest-container {
+
+}
+
+.search-box-suggestion {
+
+}

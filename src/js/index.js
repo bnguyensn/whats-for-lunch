@@ -6,10 +6,10 @@ import Footer from './footer';
 import '../css/main.css';
 
 // Render the header
-ReactDOM.render(
-    <Header />,
-    document.getElementById('header')
-);
+// ReactDOM.render(
+//     <Header />,
+//     document.getElementById('header')
+// );
 
 // Render the main app
 ReactDOM.render(
