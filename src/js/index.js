@@ -4,6 +4,7 @@ import App from './app';
 import Header from './header';
 import Footer from './footer';
 import '../css/main.css';
+import '../css/content.css';
 
 // Render the header
 // ReactDOM.render(

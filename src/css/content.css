@@ -1,0 +1,6 @@
+/* This stylesheet handles both #content and #app */
+
+#content, #app {
+    width: 100vw; height: 100vh;
+}
+
