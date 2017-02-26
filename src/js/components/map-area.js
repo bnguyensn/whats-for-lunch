@@ -12,7 +12,7 @@ class MapArea extends Component {
         // Invoked immediately after this component is mounted.
 
         // Global variables
-        const isGeoLocationEnabled = (this.props.enableGeoLocation == 'true');
+        const isGeoLocationEnabled = this.props.enableGeoLocation;
 
         function initMap() {
 

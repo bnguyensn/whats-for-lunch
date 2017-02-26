@@ -24,7 +24,7 @@ class App extends Component {
     render() {
         return (
             <div className="App" id="app">
-                <MapArea enableGeoLocation="true" />
+                <MapArea enableGeoLocation={true} />
                 <SearchBox />
             </div>
         )
