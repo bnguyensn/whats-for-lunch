@@ -120,6 +120,6 @@ module.exports = (env) => {
         devServer: {
             contentBase: './src'
         },
-        // devtool: 'source-map'
+        devtool: 'source-map'
     };
 };

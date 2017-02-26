@@ -6,13 +6,26 @@ function Hello(props) {
     return  <p>Hello {props.name}!</p>
 }
 
+class HelloClass extends Component {
+    constructor(props) {
+        super(props);
+        console.log(`Hello ${this.props.name}.`);
+    }
+
+    render() {
+        console.log(`Hello again, ${this.props.name}.`);
+        return (
+            <span></span>
+        )
+    }
+}
+
 class App extends Component {
     render() {
         return (
             <div className="App" id="app">
-                <MapArea />
+                <MapArea enableGeoLocation="true" />
                 <SearchBox />
-
             </div>
         )
     }
