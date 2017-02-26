@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../css/components/map-area.css';
+import regionEngLdnCity from '../../assets/geojson/eng.ldn.city.geojson';
 
 class MapArea extends Component {
 
@@ -58,8 +59,35 @@ class MapArea extends Component {
                     'Error: Your browser doesn\'t support geolocation.');
             }
 
+
+            // Load region boundaries 2
+            try {
+                const cityFeature = addCity();
+                console.log(cityFeature.length);
+                let i;
+                for (i = 0; i < cityFeature.length; i++) {
+                    map.data.overrideStyle(cityFeature[i], {
+                        clickable: false,
+                        fillColor: '#C8E6C9', // Green 100
+                        strokeWeight: 1
+                    })
+                }
+            } catch (e) {
+                console.log('Something went wrong.')
+            }
+
+            function addCity() {
+                try {
+                    console.log('ello');
+                    return map.data.addGeoJson(regionEngLdnCity, { idPropertyName: 'CITY'});
+                } catch(e) {
+                    console.log('Cannot load geojson.');
+                }
+            }
+
+
             // Load region boundaries
-            loadRegionBoundaries().then((features) => {
+            /*loadRegionBoundaries().then((features) => {
                 let i;
                 for (i = 0; i < features.length; i++) {
                     map.data.overrideStyle(features[i], {
@@ -76,7 +104,7 @@ class MapArea extends Component {
                 return new Promise((resolve, reject) => {
                     try {
                         map.data.loadGeoJson(
-                            'assets/geojson/eng.ldn.city.geojson',
+                            regionEngLdnCity,
                             {idPropertyName: 'BOUNDARY'},
                             (features) => {
                                 resolve(features);
@@ -86,7 +114,7 @@ class MapArea extends Component {
                         reject(e);
                     }
                 })
-            }
+            }*/
 
 
             /*map.data.loadGeoJson(

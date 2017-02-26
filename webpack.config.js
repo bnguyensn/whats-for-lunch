@@ -5,7 +5,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 
-
 module.exports = (env) => {
     const isProduction = env.production === true;
     const platflorm = env.platform;
@@ -76,6 +75,12 @@ module.exports = (env) => {
                 {
                     test: /\.txt$/,
                     use: 'raw-loader',
+                    exclude: /node_modules/
+                },
+                // JSONs
+                {
+                    test: /\.(json|geojson)$/,
+                    use: 'json-loader',
                     exclude: /node_modules/
                 },
 
